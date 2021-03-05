@@ -1,3 +1,5 @@
+import s from './Filter.module.css';
+
 const Filter = ({ onFilterChanged }) => {
   const handleFilterChanged = e => {
     const value = e.currentTarget.value;
@@ -5,9 +7,9 @@ const Filter = ({ onFilterChanged }) => {
   };
 
   return (
-    <label>
+    <label className={s.label}>
       Find contacts by name
-      <input type="text" onChange={handleFilterChanged}></input>
+      <input className={s.text} type="text" onChange={handleFilterChanged}></input>
     </label>
   );
 };

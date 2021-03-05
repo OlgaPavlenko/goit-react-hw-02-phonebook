@@ -1,0 +1,18 @@
+li {
+    list-style-type: none;
+    margin-right: 25px;
+}
+
+.contactInfo {
+    padding-inline-start: 0px;
+}
+
+.contact {
+    margin-left: 10px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}

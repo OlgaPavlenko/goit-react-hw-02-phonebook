@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Form from './Components/Form/Form';
 import ContactList from './Components/ContactList/ContactList';
 import Filter from './Components/Filter/Filter';
+import s from './index.module.css';
 
 export default class App extends Component {
   state = {
@@ -70,14 +71,14 @@ export default class App extends Component {
     const filteredContactList = this.filterContactList();
 
     return (
-      <>
+      <div className={s.container}>
         <Form onSubmit={this.addContact} />
         <Filter onFilterChanged={this.onFilterChanged} />
         <ContactList
           contactsList={filteredContactList}
           onDelete={this.onDelete}
         />
-      </>
+      </div>
     );
   }
 }

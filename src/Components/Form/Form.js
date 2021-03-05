@@ -26,10 +26,11 @@ export default class Form extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label htmlFor={this.nameInputId}>
+      <form className={s.form} onSubmit={this.handleSubmit}>
+        <label className={s.labelName} htmlFor={this.nameInputId}>
           Name
           <input
+          className={s.name}
             type="phone"
             name="name"
             value={this.state.name}
@@ -37,9 +38,10 @@ export default class Form extends Component {
             id={this.nameInputId}
           ></input>
         </label>
-        <label htmlFor={this.phoneInputId}>
+        <label className={s.labelName} htmlFor={this.phoneInputId}>
           Number
           <input
+          className={s.number}
             type="text"
             name="number"
             value={this.state.number}

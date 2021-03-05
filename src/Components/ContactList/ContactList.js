@@ -1,14 +1,16 @@
+import s from './ContactList.module.css';
+
 export default function ContactsRender({ contactsList, onDelete }) {
   return (
     <>
-      <ul>
+      <ul className={s.contactInfo}>
         {contactsList &&
           contactsList.map(({ id, name, number }) => (
-            <li key={id}>
-              <span>
+            <li className={s.info} key={id}>
+              <span className={s.contact}>
                 {name} - {number}
               </span>
-              <button type="button" onClick={() => onDelete(id)}>
+              <button ype="button" onClick={() => onDelete(id)}>
                 Delete
               </button>
             </li>
