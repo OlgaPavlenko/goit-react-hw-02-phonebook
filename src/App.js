@@ -14,7 +14,6 @@ export default class App extends Component {
     ],
     filter: '',
   };
-  k;
   addContact = contact => {
     const isFinded = this.state.contacts.find(
       ({ name }) =>
